@@ -1,0 +1,28 @@
+localhost:8080/
+
+/account
+	@RequestMapping("/login/{login}")
+ 	public String login(@RequestParam(required = true) String login)		len String
+
+	@RequestMapping(method = RequestMethod.POST, value = "/newaccount")		account : {"accountId":0,"location":"behind wall","accountType":true,"login":"carl"}
+	public String addItem(@RequestBody Account account)
+
+/item
+	@RequestMapping("/allitems")
+	public String getAllItems()
+
+	@RequestMapping(method = RequestMethod.POST, value = "/newitem")		item: {"id":0,"barcode":3155431,"name":"frdf","description":"It is a plain box"}
+   	public String addItem(@RequestBody Item item)
+
+
+	@RequestMapping(method = RequestMethod.POST, value = "/restock")		warehouseitem: {"id":0,"barcode":3155431,"name":"frdf","description":"It is a plain box","amount":7}}
+	public String restock(@RequestBody WarehouseItem warehouseItem)
+
+	@RequestMapping("/allstockeditems")
+	public String getAllStockedItems()
+
+/order
+	@RequestMapping(method = RequestMethod.POST, value = "/neworder")		order: {"orderId":0,"orderInfo":"empty","orderedItems":"listOfItemsToOrder","account":"Carl"}
+  	public String newOrder(@RequestBody Order order)
+
+	LIST: [{"id":1,"barcode":123,"name":"asd","description":"dfg"},{"id":3,"barcode":31598431,"name":"Box","description":"It is a plain box"},{"id":6,"barcode":3155431,"name":"frdf","description":"It is a plain box"}]

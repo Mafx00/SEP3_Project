@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://206.189.31.131:5432/headquarters
+#    206.189.31.131 IP for remote db if you want to run it from your PC
+    username:  postgres
+    password:   postgres
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        show_sql: true
+        default_schema: headquarters
